@@ -1,0 +1,32 @@
+.nav-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(12, 11, 11);
+}
+.nav-bar-items li {
+  list-style: none;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  transition: 0.3s ease-in-out;
+}
+.nav-bar-items {
+  display: flex;
+  align-items: center;
+}
+.nav-bar-items li:hover {
+  color: #bab5b5;
+}
+.nav-bar-items a {
+  text-decoration: none;
+}
+
+.nav-logo {
+  cursor: pointer;
+  padding-top: 0.5%;
+}
