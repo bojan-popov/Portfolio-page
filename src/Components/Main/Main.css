@@ -1,18 +1,19 @@
 .main-project {
   padding-top: 8vh;
 }
-.project-navbar-items {
+.main-navbar-items {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.project-navbar-items li {
+.main-navbar-items li {
   list-style: none;
   padding: 15px;
   cursor: pointer;
+  font-size: 16px;
   transition: 0.3s ease-in-out;
 }
-.project-navbar-items li:hover {
+.main-navbar-items li:hover {
   color: #bab5b5;
 }
 .fitImage img {
@@ -23,11 +24,11 @@
   z-index: 1;
   transition: 0.5s ease-in-out;
 }
-.project {
+.main {
   position: relative;
   z-index: 1;
 }
-.project-new {
+.main-new {
   z-index: -2;
   background-color: black;
   color: white;
@@ -37,7 +38,7 @@
   top: 0;
   left: 0;
 }
-.project-header {
+.main-header {
   position: absolute;
   top: 80%;
   left: 10%;

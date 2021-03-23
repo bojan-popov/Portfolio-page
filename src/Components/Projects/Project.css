@@ -1,0 +1,8 @@
+.project {
+  font-size: 50px;
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}

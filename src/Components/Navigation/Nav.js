@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 import logo from "./img/LOGO.png";
 import { Link } from "react-router-dom";
 
 function Nav() {
+  const [sideBar, setSideBar] = useState(false);
+
   return (
     <>
       <div className="nav-main">
         <div className="nav-logo">
-          <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link>
+          <img src={logo} alt="logo" />
         </div>
         <nav className="nav-bar">
-          <ul className="nav-bar-items">
+          <button onClick={() => setSideBar(!sideBar)}>Open</button>
+          <ul className="nav-bar-items" id={sideBar ? "hidden" : ""}>
             <Link to="#">
               <li>Work</li>
             </Link>
