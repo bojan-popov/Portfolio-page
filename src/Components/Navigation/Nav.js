@@ -1,32 +1,46 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import logo from "./img/LOGO.png";
-import { Link } from "react-router-dom";
+import { FaBars, FaWindowClose } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   const [sideBar, setSideBar] = useState(false);
 
+  const sideBarHandler = () => setSideBar(!sideBar);
   return (
     <>
       <div className="nav-main">
         <div className="nav-logo">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <nav className="nav-bar">
-          <button onClick={() => setSideBar(!sideBar)}>Open</button>
-          <ul className="nav-bar-items" id={sideBar ? "hidden" : ""}>
-            <Link to="#">
+          <div onClick={sideBarHandler}>
+            {sideBar ? (
+              <FaWindowClose className="nav-burger" />
+            ) : (
+              <FaBars className="nav-burger" />
+            )}
+          </div>
+          <ul
+            className="nav-bar-items"
+            onClick={sideBarHandler}
+            id={sideBar ? "hidden" : ""}
+          >
+            <NavLink to="/home" activeClassName="active">
               <li>Work</li>
-            </Link>
-            <Link to="#">
+            </NavLink>
+            <NavLink to="info">
               <li>Info</li>
-            </Link>
-            <Link to="#">
+            </NavLink>
+            <NavLink to="mentorship">
               <li>Mentorship</li>
-            </Link>
-            <Link to="#">
+            </NavLink>
+            <NavLink to="contact">
               <li>Contact</li>
-            </Link>
+            </NavLink>
           </ul>
         </nav>
       </div>

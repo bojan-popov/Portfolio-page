@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Buttons.css";
 import "./Main.css";
 
 const MainPrinter = (props) => {
@@ -8,10 +9,18 @@ const MainPrinter = (props) => {
       <div className="main-project">
         <div className="main-navbar">
           <ul className="main-navbar-items">
-            <li onClick={props.onAllHandler}>All</li>
-            <li onClick={props.onConceptArtHandler}>Concept Art</li>
-            <li onClick={props.onMattePaintHandler}>Matte Paint</li>
-            <li onClick={props.onShortFilmHandler}>Short Film</li>
+            <li onClick={props.onAllHandler}>
+              <button className="button">All</button>
+            </li>
+            <li onClick={props.onConceptArtHandler}>
+              <button>Concept Art</button>
+            </li>
+            <li onClick={props.onMattePaintHandler}>
+              <button className="button">Matte Paint</button>
+            </li>
+            <li onClick={props.onShortFilmHandler}>
+              <button className="button">Short Film</button>
+            </li>
           </ul>
         </div>
         {props.project.map((project) => {

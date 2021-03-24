@@ -2,6 +2,8 @@ import Items from "./Items";
 import React, { useState } from "react";
 import MainPrinter from "./MainPrinter";
 import Nav from "../Navigation/Nav";
+import { motion } from "framer-motion";
+import { Animation, Transition } from "../Animation/Animation";
 
 function Main(onSelectConceptArt) {
   const [project, setProject] = useState(Items);
@@ -41,14 +43,22 @@ function Main(onSelectConceptArt) {
 
   return (
     <>
-      <Nav />
-      <MainPrinter
-        project={project}
-        onAllHandler={onAllHandler}
-        onConceptArtHandler={onConceptArtHandler}
-        onMattePaintHandler={onMattePaintHandler}
-        onShortFilmHandler={onShortFilmHandler}
-      />
+      <motion.div
+        initial="out"
+        animate="in"
+        exit="out"
+        variants={Animation}
+        transition={Transition}
+      >
+        <Nav />
+        <MainPrinter
+          project={project}
+          onAllHandler={onAllHandler}
+          onConceptArtHandler={onConceptArtHandler}
+          onMattePaintHandler={onMattePaintHandler}
+          onShortFilmHandler={onShortFilmHandler}
+        />
+      </motion.div>
     </>
   );
 }

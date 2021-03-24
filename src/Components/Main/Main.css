@@ -19,7 +19,7 @@
 .fitImage img {
   object-fit: cover;
   object-position: center;
-  height: 450px;
+  height: 41vh;
   width: 100%;
   z-index: 1;
   transition: 0.5s ease-in-out;
@@ -33,7 +33,7 @@
   background-color: black;
   color: white;
   width: 100%;
-  height: 450px;
+  height: 41vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,4 +45,12 @@
 }
 .fitImage img:hover {
   opacity: 0;
+}
+@media screen and (max-width: 450px) {
+  .main-navbar-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+  }
 }
