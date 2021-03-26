@@ -23,7 +23,6 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/home" exact component={Main} />
           <Route path="/info" component={Info} />
           <Route path="/contact" component={Contact} />
           <Route path="/mentorship" component={Mentorship} />

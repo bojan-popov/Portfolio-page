@@ -4,6 +4,7 @@
   background-color: rgb(12, 11, 11);
   color: rgb(255, 255, 255, 0.8);
   overflow: hidden;
+  z-index: 9999;
 }
 .footer-icons li {
   list-style: none;

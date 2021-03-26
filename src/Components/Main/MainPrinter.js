@@ -25,12 +25,12 @@ const MainPrinter = (props) => {
         </div>
         {props.project.map((project) => {
           return (
-            <div>
-              <div key={project.index} className={project.cName}>
+            <div key={project.key}>
+              <div className={project.cName}>
                 <Link to={project.path}>
                   <img src={project.image} alt={project.imageAlt} />
                 </Link>
-                <div key={project.index} className={project.cNameDiv}>
+                <div className={project.cNameDiv}>
                   <h2 className={project.cNameH}>{project.headerText}</h2>
                 </div>
               </div>

@@ -29,7 +29,7 @@ function Nav() {
             onClick={sideBarHandler}
             id={sideBar ? "hidden" : ""}
           >
-            <NavLink to="/home" activeClassName="active">
+            <NavLink to="/" activeClassName="active">
               <li>Work</li>
             </NavLink>
             <NavLink to="info">
